@@ -12,8 +12,8 @@ app: typer.Typer = typer.Typer()
 def start():
     while True:
         try:
-            n = int(typer.prompt("Enter the number of players"))
-            if n <= 0:
+            player_count: int = int(typer.prompt("Enter the number of players"))
+            if player_count <= 0:
                 raise ValueError("Number of players must be a positive integer.")
             break
         except ValueError as e:
