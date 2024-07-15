@@ -25,7 +25,7 @@ def start():
 
     word: str = random.choice(words)
 
-    players: list[str] = [f"Player {i + 1}" for i in range(n)]
+    players: list[str] = [f"Player {i + 1}" for i in range(player_count)]
 
     system_printer("Welcome to Hangman!")
     system_printer("Try to guess the word one letter at a time.")
