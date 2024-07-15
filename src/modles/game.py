@@ -1,9 +1,12 @@
+from src.config import GUESSES_COUNT
+
+
 class HangmanGame:
-    def __init__(self, word: str, players: list[str], guesses_count: int):
+    def __init__(self, word: str, players: list[str]):
         self.word: str = word.lower()
         self.guessed_word: list[str] = ['_'] * len(word)
         self.guessed_letters: set = set()
-        self.remaining_guesses: int = guesses_count
+        self.remaining_guesses: int = GUESSES_COUNT
         self.scores: dict[str, int] = {player: 0 for player in players}
         self.players: list[str] = players
         self.current_player_index: int = 0

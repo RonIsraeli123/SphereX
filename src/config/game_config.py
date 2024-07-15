@@ -1,0 +1,1 @@
+GUESSES_COUNT: int = 20

@@ -30,9 +30,7 @@ def start():
     system_printer("Welcome to Hangman!")
     system_printer("Try to guess the word one letter at a time.")
 
-    guesses_count: int = 20
-
-    game: HangmanGame = HangmanGame(word, players, guesses_count)
+    game: HangmanGame = HangmanGame(word, players)
 
     while not game.is_finished():
         game.display()
